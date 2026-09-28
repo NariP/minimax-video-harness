@@ -1,0 +1,10 @@
+raw/
+**/inputs/
+*.mp4
+*.mov
+*.h264.mp4
+job.json
+prompt.txt
+.env
+__pycache__/
+.DS_Store

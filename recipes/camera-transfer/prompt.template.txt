@@ -1,0 +1,25 @@
+subject_definitions
+<Subject 1> is {SUBJECT_NAME} from the reference image: {SUBJECT_LOOK — shape, material, colors, face, outfit/props; every detail that must survive every angle}, {SUBJECT_POSE — the one fixed pose it holds}.
+<Subject 2> is {SCENE} from the reference image: {SCENE_LOOK — ground, light, and 2-3 landmarks that differ by direction so each angle reads as a different side}.
+<Video 1> is the camera reference: it provides only the camera path, the viewpoint changes around a motionless subject, the lens feel, the cut timing and the pacing. Its {ORIGINAL_SUBJECT}, {ORIGINAL_SET}, props and lighting are not used.
+
+summary
+[reference generation] A {DURATION}-second {ASPECT} video in which <Subject 1> stays still in <Subject 2> while the camera moves exactly like <Video 1>: {ONE-SENTENCE SHAPE OF THE CAMERA PATH, e.g. "from an extreme close-up, around the subject from all sides, back to an extreme close-up so it loops"}.
+
+retention_analysis
+<Subject 1> (appears in every shot): fully_preserved - {IDENTITY LOCK LIST} stay identical from every angle; proportions never change.
+<Subject 2> (appears in every shot): partially_preserved - replaces the set of <Video 1>, seen from all directions.
+<Video 1> (camera path, viewpoint changes, cut timing and pacing): fully_preserved - every viewpoint change and its timing follows <Video 1>; none of its visible content is copied.
+
+detailed_description
+The target video is {STYLE — e.g. realistic macro toy photography, wide-angle lens at ground level, natural light, shallow depth of field}.
+[Shot 1] {FRAMING}: {what of Subject 1 / Subject 2 is visible}.
+[Shot 2] At 00:00.417, {FRAMING}: ...
+{…one line per cut, timestamps copied from the reference video — see recipe README "Measure cut times"}
+Throughout, <Subject 1> stays in the same spot and pose; only {SMALL ALLOWED MOTION, e.g. breeze in the fibers, one small head tilt}. No text, no subtitles.
+
+overall_soundscape
+{AMBIENCE of the new scene}. No speech.
+
+non_diegetic_music
+{None | short description}.

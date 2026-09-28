@@ -1,0 +1,10 @@
+{
+  "id": "camera-transfer-v1",
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "duration": 8,
+  "ratio": "9:16",
+  "prompt_file": "prompt.txt",
+  "reference_images": ["inputs/subject.png"],
+  "reference_videos": ["inputs/camera_ref.mp4"]
+}
