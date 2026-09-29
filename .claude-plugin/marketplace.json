@@ -1,0 +1,14 @@
+{
+  "name": "minimax-video-harness",
+  "owner": {
+    "name": "narip"
+  },
+  "description": "Tested MiniMax H3 video recipes + execution harness.",
+  "plugins": [
+    {
+      "name": "minimax-video-harness",
+      "source": "./",
+      "description": "MiniMax H3 영상 생성 레시피 + 실행 하네스 (camera-transfer / Genjutsu 스타일)."
+    }
+  ]
+}

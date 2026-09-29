@@ -51,10 +51,10 @@ ffmpeg -v error -i inputs/camera_ref.mp4 \
 ### 3~5. 실행
 
 ```bash
-cp job.example.json job.json   # id, 경로 수정
-python3 ../../harness/minimax.py check  job.json   # 예상 과금 초 확인
-python3 ../../harness/minimax.py submit job.json
-python3 ../../harness/minimax.py poll   camera-transfer-v1
+cp <repo>/recipes/camera-transfer/job.example.json job.json   # 내 작업 폴더에서, id·경로 수정
+python3 <repo>/harness/minimax.py check  job.json   # 예상 과금 초 확인
+python3 <repo>/harness/minimax.py submit job.json
+python3 <repo>/harness/minimax.py poll   camera-transfer-v1
 ```
 
 ## 결과가 이상할 때

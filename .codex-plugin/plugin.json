@@ -1,0 +1,14 @@
+{
+  "name": "minimax-video-harness",
+  "version": "0.1.0",
+  "description": "MiniMax H3 영상 생성 레시피 + 실행 하네스. 레퍼런스 영상의 카메라만 따라하는 camera-transfer(Genjutsu 스타일), 입력 검증·VP9 자동 변환·예상 과금·중복 제출 방지 원장·조회/다운로드.",
+  "keywords": ["minimax", "hailuo", "h3", "video-generation", "camera-transfer", "motion-transfer", "genjutsu"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MiniMax Video Harness",
+    "shortDescription": "레퍼런스 영상의 카메라를 내 피사체로 옮기기 (MiniMax H3)",
+    "developerName": "narip",
+    "category": "Creative",
+    "websiteURL": "https://github.com/NariP/minimax-video-harness"
+  }
+}

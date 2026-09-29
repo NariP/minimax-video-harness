@@ -5,27 +5,32 @@ description: Run MiniMax H3 video jobs through a tested harness and recipes. Use
 
 # MiniMax Video Harness
 
-Repo root = the directory containing `harness/minimax.py`. Paths below are relative to it.
+## 0. Locate the repo root
+
+`ROOT` = `${CLAUDE_PLUGIN_ROOT}` when that variable is set (Claude Code plugin install). Otherwise it is two directories above this SKILL.md (resolve symlinks), i.e. the directory that contains `harness/minimax.py`. Check it exists before continuing.
+
+Work files (job.json, prompt.txt, inputs, the `raw/` ledger) live in the user's project directory, never inside `ROOT`.
 
 ## 1. Pick a recipe
 
 | User wants | Recipe |
 |---|---|
-| Subject stays still, camera follows a reference video | `recipes/camera-transfer/README.md` |
+| Subject stays still, camera follows a reference video | `ROOT/recipes/camera-transfer/README.md` |
 
 If nothing fits, say so; do not stretch a recipe.
 
 ## 2. Before writing anything
 
-- Read `docs/gotchas.md` once.
-- For the prompt format, use the official `h3-prompt-writing` skill (Ref2VA six sections). Install: `npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing`.
+- Read `ROOT/docs/gotchas.md` once.
+- Requirements: Python 3.9+, `ffmpeg`/`ffprobe`, `MINIMAX_API_KEY` (env var or `~/.config/minimax/.env`).
+- For the prompt format, use the official `h3-prompt-writing` skill (Ref2VA six sections). If missing: `npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing`.
 
-## 3. Run
+## 3. Run (from the user's project directory)
 
 ```bash
-python3 harness/minimax.py check  <job.json>   # show estimated billed seconds to the user before submitting
-python3 harness/minimax.py submit <job.json>
-python3 harness/minimax.py poll   <job-id>
+python3 "$ROOT/harness/minimax.py" check  job.json   # show estimated billed seconds to the user before submitting
+python3 "$ROOT/harness/minimax.py" submit job.json
+python3 "$ROOT/harness/minimax.py" poll   <job-id>   # → raw/<job-id>/<job-id>.mp4
 ```
 
 Rules:
